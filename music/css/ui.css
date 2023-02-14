@@ -1,0 +1,58 @@
+/* style the ui element that contains the two tracklists */
+
+#ui {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 30px 20px 140px 20px;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+#ui .container {
+    flex-grow: 1;
+    overflow: hidden;
+}
+#ui .container h2 {
+    text-align: center;
+    line-height: 50px;
+}
+
+.tracklist {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    counter-reset: tracknums;
+}
+.tracklist-top {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+    height: 26px;
+}
+
+.pl-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    margin: 0 auto;
+}
+.pl-header .btn {
+    width: 50px;
+    height: 50px;
+    padding: 9px;
+    transition: background-color var(track-hl-speed) ease;
+    cursor: pointer;
+}
+.pl-header .btn:hover {
+    background-color: var(--bg-light);
+}
+.pl-header .btn img {
+    width: 32px;
+}
+#import img ,
+#export img {
+    transform: rotate(-90deg);
+}

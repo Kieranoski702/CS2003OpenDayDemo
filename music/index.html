@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music</title>
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/page.css">
+    <link rel="stylesheet" href="css/player.css">
+    <link rel="stylesheet" href="css/sortable.css">
+    <link rel="stylesheet" href="css/track.css">
+    <link rel="stylesheet" href="css/ui.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Beatlemania</h1>
+    </div>
+    <div id="ui">
+        <div class="container">
+            <div class="pl-header">
+                <!-- SVG by Ant Design, https://www.svgrepo.com/svg/332418/import -->
+                <div id="import" class="btn"><img src="img/import.svg" alt=""></div>
+                <h2>Playlist</h2>
+                <!-- SVG by Ant Design, https://www.svgrepo.com/svg/332349/export -->
+                <div id="export" class="btn"><img src="img/export.svg" alt=""></div>
+            </div>
+            <p id="pl-info" class="tracklist-top"></p>
+            <div class="tracklist" id="playlist"></div>
+        </div>
+        <div class="container">
+            <h2>Library</h2>
+            <p id="lb-info" class="tracklist-top"></p>
+            <div class="tracklist" id="library"></div>
+        </div>
+    </div>
+    <div id="player">
+        <p id="player-name"></p>
+        <p id="player-details"></p>
+        <div id="progress-info">
+            <p id="player-pos">00:00</p>
+            <div id="progress-bar">
+                <div id="progress"></div>
+            </div>
+            <p id="player-dur">00:00</p>
+        </div>
+    </div>
+
+    <script src="js/fetch.js"></script>
+    <script src="js/play.js"></script>
+    <script src="js/populate.js"></script>
+    <script src="js/playlist.js"></script>
+    <script src="js/sortable.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

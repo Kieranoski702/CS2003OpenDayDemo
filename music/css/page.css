@@ -1,0 +1,35 @@
+/* page-level styles and variables */
+
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+
+:root { /* global variables */
+    --track-height: 70px;
+    --track-hl-speed: 0.1s;
+
+    --bg-dark: #334;
+    --bg-light: #3a3a4a;
+    --shadow: #2c2c3b;
+    --text: #eee;
+    --insert-hint: #99f;
+    --btn-dark: #778;
+    --btn-light: #eee;
+}
+
+html {
+    height: 100%;
+    background-color: var(--bg-dark);
+    font-family: 'Montserrat';
+    color: var(--text);
+}
+
+.header {
+    height: 80px;
+    background-color: var(--bg-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--shadow) 0px 4px;
+}

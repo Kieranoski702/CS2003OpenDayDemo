@@ -1,0 +1,46 @@
+/* style sortable tracks */
+
+#playlist .track {
+    cursor: grab;
+    border-width: 0;
+    border-style: solid;
+    border-color: var(--insert-hint);
+    position: relative;
+    box-sizing: content-box;
+}
+#playlist .track:active {
+    cursor: grabbing;
+}
+
+#playlist .insert {
+    background-color: var(--bg-light);
+    z-index: 10;
+}
+#playlist .insert.above {
+    border-top-width: 2px;
+    margin-top: -2px;
+}
+#playlist .insert.below {
+    border-bottom-width: 2px;
+    margin-bottom: -2px;
+}
+
+/* show a sortable hint on hover */
+#playlist .track::after {
+    content: url(../img/updown.svg);
+    width: var(--track-height);
+    height: var(--track-height);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    right: calc(-1 * var(--track-height));
+
+    transition: opacity var(--track-hl-speed) ease;
+    opacity: 0;
+}
+#playlist .track:hover::after {
+    opacity: 1;
+}

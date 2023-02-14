@@ -1,0 +1,70 @@
+/* style track elements */
+
+.track {
+    height: var(--track-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color var(--track-hl-speed) ease;
+    margin: 0 var(--track-height);
+    position: relative;
+    padding: 0 16px 0 var(--track-height);
+    /* border-radius: 4px; */
+}
+.track:hover {
+    background-color: var(--bg-light);
+}
+
+.track::before {
+    counter-increment: tracknums;
+    content: counter(tracknums);
+    width: var(--track-height);
+    height: var(--track-height);
+    position: absolute;
+    left: 0;
+    text-align: center;
+    line-height: var(--track-height);
+}
+
+.track .btn.play {
+    position: absolute;
+    left: 0;
+    background-color: var(--bg-light);
+}
+
+.track .btn {
+    width: var(--track-height);
+    height: var(--track-height);
+    padding: 24px;
+    transition: opacity var(--track-hl-speed) ease, fill var(--track-hl-speed) ease;
+    opacity: 0;
+    cursor: pointer;
+}
+.track:hover .btn {
+    opacity: 1;
+}
+.track .btn svg {
+    transition: fill var(--track-hl-speed) ease;
+    fill: var(--btn-dark);
+}
+.track .btn:hover svg {
+    fill: var(--btn-light);
+}
+.track .btn.left {
+    position: absolute;
+    left: calc(-1 * var(--track-height));
+}
+#playlist .track .btn.left svg {
+    transform: rotate(45deg);
+}
+
+.track .info {
+    min-width: 250px;
+    overflow: hidden;
+}
+.track .info .name {
+    font-weight: 600;
+}
+.track .info .details {
+    font-size: 14px;
+}
