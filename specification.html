@@ -1,0 +1,172 @@
+<h1 id="cs2003-web1-practical-playlist-application">CS2003 Web1
+Practical – Playlist application</h1>
+<p>Deadline: 26 October 2022, 9pm</p>
+<h2 id="of-coursework-mark">30% of coursework mark</h2>
+<h2
+id="mms-is-the-definitive-source-for-deadline-and-credit-details">MMS is
+the definitive source for deadline and credit details</h2>
+<h2 id="description">Description</h2>
+<p>Your task is to build a simple web application that will allow the
+creation of music playlists. Songs will be chosen from a list of 193
+Beatles songs given in a static data file. As the user chooses songs to
+be added to the playlist metadata regarding the songs will be displayed
+on the screen.</p>
+<p>Technologies you will need to use:</p>
+<ul>
+<li><p>HTML5 for the structure of web pages</p></li>
+<li><p>CSS3 for presentation of web pages</p></li>
+<li><p>JavaScript for client-side programming</p></li>
+</ul>
+<h2 id="section"></h2>
+<h2 id="dataset">Dataset</h2>
+<p>We will use a dataset that contains metadata about Beatles songs.
+This dataset is available under a “CC0: Public Domain” license from
+Kaggle:</p>
+<p><a
+href="https://www.kaggle.com/datasets/chadwambles/allbeatlesspotifysongdata2009remaster">https://www.kaggle.com/datasets/chadwambles/allbeatlesspotifysongdata2009remaster</a></p>
+<p>There are 6 CSV files in this dataset, we will use only one of these:
+TheBeatlesCleaned.csv</p>
+<p>You do not need to download this file from Kaggle. It is stored under
+the data directory on StudRes:</p>
+<p>CS2003/Practicals/Practical2-Web1-Playlist/data/TheBeatlesCleaned.csv</p>
+<p>Note that the file we provide on StudRes is slightly modified to make
+parsing easier. Specifically, the lines are separated by \n characters,
+the columns on a line are separated by a ; (semi-colon) character and
+the fields are not quoted. See data/readme.txt for more details if you
+are interested.</p>
+<p>This file contains 11 columns and 193 rows (excluding the header
+line). The column names and their use in this practical are listed in
+the following.</p>
+<p>The first column is “id. The value stored in this column will not be
+visible on screen, however you may use it as part of your program to
+identify entries in the dataset.</p>
+<p>Columns 2—4 and 11 (“year”, “album”, “song”, “duration_ms”) will be
+displayed on the screen.</p>
+<p>Columns 5—10 (“danceability”, “energy”, “speechiness”,
+“acousticness”, “liveness”, “valence”) are so called audio features. The
+Kaggle page for this dataset defines audio features as “how Spotify
+measures emotion in their music catalog”. You are <strong>not</strong>
+required to use these values at all in your implementation, though feel
+free to use them in creative ways if you want!</p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li><p>Write a node.js program called <strong>convert.js</strong> which
+will convert the CSV file into a JSON file. Choose an appropriate data
+structure for the JSON file. This program should read data from
+data/TheBeatlesCleaned.csv and write the output to
+data/TheBeatlesCleaned.json when run from inside the Web1-playlist
+directory. Do not use an external CSV parsing library. You may assume
+that the line separator is “\n” and the column separator is “,” (comma)
+and that the values do not contain any comma characters in
+them.</p></li>
+<li><p>Write a web application using HTML, CSS and client side
+JavaScript with the following features.</p></li>
+<li><p>Create a list of all songs from the data file.</p></li>
+<li><p>Create a placeholder for a playlist. A playlist is a set of
+selected songs, together with some aggregate information about the
+contents of the playlist.</p></li>
+<li><p>For each song, design and implement a way of adding it to a
+playlist.</p></li>
+<li><p>Songs should be listed in the order of addition in the
+playlist.</p></li>
+<li><p>For every song that was previously added to the playlist, design
+and implement a way of removing it from the playlist.</p></li>
+<li><p>The playlist should render the list of songs in the playlist. In
+addition it should show the number of songs in the playlist and the
+total duration of the playlist.</p></li>
+<li><p>Songs (in the list of all songs and in the playlist) are
+displayed in the following format:</p>
+<ul>
+<li><p><strong>NAME</strong> (Album: <strong>ALBUM</strong>, Year:
+<strong>YEAR</strong>, Duration: <strong>DURATION</strong>)</p></li>
+<li><p>Where NAME comes from the “song” field,<br />
+ALBUM comes from the “album” field,<br />
+YEAR comes from the “year” field, and<br />
+DURATION comes from the “duration_ms” field.</p></li>
+<li><p>Duration is given in milliseconds. Convert it to a MM:SS format
+(minutes and seconds, separated by a colon). So a value of “120853”
+(from the song Please Please Me should be displayed as “2:01”). Second
+values are to be rounded to the nearest integer and zero-padded to two
+digits.</p></li>
+</ul></li>
+<li><p>Make sure your program does not depend on the particular dataset
+you are given. We should be able to add/remove/edit new songs to the CSV
+file, run <strong>convert.js</strong> to convert this file to JSON and
+use your web application with this new JSON file without any further
+changes. You may assume that the columns in the CSV file and the file
+format will not change.</p></li>
+<li><p>Use</p></li>
+<li><p>Test your program fully and document your testing in the
+report.</p></li>
+</ul>
+<p>We recommend an incremental approach: make sure that each part of
+your program works before moving on to the next part. Make a safe copy
+of whatever you have got working so far so that you always have a
+working solution to submit while you are developing the next part of
+your solution. This should allow you to experiment with different ways
+of organising your code and implementing functionality without worrying
+of breaking things.</p>
+<h2 id="hints">Hints</h2>
+<ul>
+<li><p>Look into the following methods from the File system (fs) library
+of node.js: readFileSync, toLocaleString, writeFileSync</p></li>
+<li><p>Use an HTML validator and a CSS validator to validate your
+code.</p></li>
+<li><p>Use strict mode for JavaScript and check for errors/warnings in
+the JavaScript console of your web browser.</p></li>
+<li><p>It is good practice to write your HTML code, CSS code, and
+JavaScript code in separate files and link to the CSS and JavaScript
+files from within the HTML file as appropriate.</p></li>
+</ul>
+<h2 id="submission">Submission</h2>
+<p>Your MMS submission should be a single .zip or .tar.gz file
+containing the following.</p>
+<ol type="1">
+<li><p><strong>Code.</strong> Any HTML, CSS and JavaScript files. These
+should be in a single directory (which may have subdirectories as
+needed) with all the source code needed to run your application. Your
+submission should not require a server-side program. It should be
+possible to take your submitted directory, copy it to a user’s
+nginx_default directory on the School host servers and use your
+application through a web browser by navigating to the right
+directory.</p></li>
+<li><p><strong>Report.</strong> A single PDF file which is a report
+which uses the report template given on StudRes. In your report, where
+appropriate, try to concentrate on why you did something in a particular
+way (i.e. design decisions) rather than just explaining what the code
+does.</p></li>
+</ol>
+<p>You must not use any external / third-party libraries or source
+code.</p>
+<p>Please do not use absolute paths for files or URLs in your
+submission. You should not need to access any external resources from
+your code. So, all your HTML, CSS and JavaScript files (as well as any
+other files, such as images, data files, or files created by your code)
+must all be in the single directory that you submit.</p>
+<p>If the marker cannot run the code you have submitted by copying it to
+the host servers and viewing it through a web browser, then you will be
+penalised in marking.</p>
+<h2 id="marking">Marking</h2>
+<p>The submission will be marked on the University’s common reporting
+scale according to the General Mark Descriptors in the Student Handbook
+at:</p>
+<p><a
+href="https://info.cs.st-andrews.ac.uk/student-handbook/learning-teaching/feedback.html">https://info.cs.st-andrews.ac.uk/student-handbook/learning-teaching/feedback.html</a></p>
+<p>To achieve excellent marks, you should meet all the requirements with
+exceptional clarity and demonstrated insight.</p>
+<h2 id="lateness">Lateness</h2>
+<h2 id="section-1"></h2>
+<p>The standard penalty for late submission applies (1 mark per 8 hour
+period, or part thereof):</p>
+<p><a
+href="https://info.cs.st-andrews.ac.uk/student-handbook/learning-teaching/assessment.html">https://info.cs.st-andrews.ac.uk/student-handbook/learning-teaching/assessment.html</a></p>
+<h2 id="section-2"></h2>
+<h2 id="collaboration">Collaboration</h2>
+<p>We encourage you to discuss your assignment with other members of the
+class. This may be especially useful for discussing the requirements.
+However, the code you develop for your solution should be your won,
+individual work, and your report should be written by you alone. Please
+ensure you are following the relevant guidelines on Good Academic
+Practice as outlined at:</p>
+<p><a
+href="https://www.st-andrews.ac.uk/students/rules/academicpractice/">https://www.st-andrews.ac.uk/students/rules/academicpractice/</a></p>
