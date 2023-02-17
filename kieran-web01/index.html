@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--==================== CSS ====================-->
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Practical 2 Playlist Website</title>
+    <link rel="icon" type="image/x-icon" href="img/window (1).ico">
+  </head>
+  <body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#" class="nav__logo">CS2003 Practical 2</a>
+        <div class="nav__btns">
+          <!-- Theme change button -->
+          <img
+            src="data:,"
+            alt="Moon"
+            class="img change-theme uil-moon"
+            id="theme-button"
+          />
+        </div>
+      </nav>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+      <section class="home section" id="home">
+        <!-- Left side of website for playlist that is being created as well as information on it -->
+        <div class="sideLeft">
+          <h1 class="home__title" id="playlist__title">Playlist</h1>
+
+          <!-- Average of all audio features in the playlist displayed as bars -->
+          <p class="home__description">Audio feature averages</p>
+          <ul class="chartlist">
+            <li>
+              <a>Danceability</a>
+              <span class="count" id="danceabilityCount">0</span>
+              <span class="index" style="width: 0%" id="danceabilitySpan"
+                >(0%)</span
+              >
+            </li>
+            <li>
+              <a>Energy</a>
+              <span class="count" id="energyCount">0</span>
+              <span class="index" style="width: 0%" id="energySpan">(0%)</span>
+            </li>
+            <li>
+              <a>Speechiness</a>
+              <span class="count" id="speechinessCount">0</span>
+              <span class="index" style="width: 0%" id="speechinessSpan"
+                >(0%)</span
+              >
+            </li>
+            <li>
+              <a>Acousticness</a>
+              <span class="count" id="acousticnessCount">0</span>
+              <span class="index" style="width: 0%" id="acousticnessSpan"
+                >(0%)</span
+              >
+            </li>
+            <li>
+              <a>Liveness</a>
+              <span class="count" id="livenessCount">0</span>
+              <span class="index" style="width: 0%" id="livenessSpan"
+                >(0%)</span
+              >
+            </li>
+            <li>
+              <a>Valence</a>
+              <span class="count" id="valenceCount">0</span>
+              <span class="index" style="width: 0%" id="valenceSpan">(0%)</span>
+            </li>
+          </ul>
+          <!-- Displays the number of songs and total duration of all the songs in the playlist -->
+          <p class="home__description" id="songCounter">Number of songs: 0</p>
+          <p class="home__description" id="totalDuration">
+            Total duration: 0:00
+          </p>
+          <!-- Search icon that when clicked shows the search bar for the playlist
+          This will only display if a song has been added to the playlist, see checkTotalSongsForSearch() function in main.js -->
+          <img
+            src="data:,"
+            alt="Search"
+            class="img uil-search"
+            onclick="showSearchBarPlaylist()"
+            id="search-buttonPlaylist"
+          />
+          <!-- Search bar for the playlist -->
+          <input
+            type="text"
+            id="searchInputPlaylist"
+            onkeyup="searchPlaylist()"
+            placeholder="Search for a song"
+          />
+          <!-- The actual playlist which is populated using the add buttons from the song list -->
+          <ul id="playlist" class="homeList"></ul>
+        </div>
+        <!-- Right side of the website for the song list -->
+        <div class="sideRight">
+          <h1 class="home__title">Songs</h1>
+          <p class="home__description">Add songs to your playlist from here!</p>
+          <!-- Search icon that when clicked shows the search bar for the song list -->
+          <img
+            src="data:,"
+            alt="Search"
+            class="img uil-search"
+            onclick="showSearchBarSongList()"
+            id="search-buttonSongList"
+          />
+          <!-- Search bar for the song list -->
+          <input
+            type="text"
+            id="searchInputSongList"
+            onkeyup="searchSongList()"
+            placeholder="Search for a song"
+          />
+          <!-- The actual song list which is populated by main.js using the appendData() function -->
+          <ul id="songList" class="homeList"></ul>
+        </div>
+      </section>
+    </main>
+
+    <!--==================== MAIN JS ====================-->
+    <script src="TheBeatlesCleaned.json"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
