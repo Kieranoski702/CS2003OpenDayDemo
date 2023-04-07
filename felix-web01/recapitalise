@@ -1,0 +1,11 @@
+#!/bin/bash
+
+
+if [ $(uname) == "Darwin" ]; then
+  head -n 1 $1
+  tail -n +2 $1 | gsed 's/;\([a-z]\)\([A-Za-z]*\)/;\u\1\2/g' | gsed 's/ \([a-z]\)\([A-Za-z]*\)/ \u\1\2/g' | gsed 's/(\([a-z]\)\([A-Za-z]*\)/(\u\1\2/g' 
+else
+  head -n 1 $1
+  tail -n +2 $1 | sed 's/;\([a-z]\)\([A-Za-z]*\)/;\u\1\2/g' | sed 's/ \([a-z]\)\([A-Za-z]*\)/ \u\1\2/g' | sed 's/(\([a-z]\)\([A-Za-z]*\)/(\u\1\2/g' 
+fi
+

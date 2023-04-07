@@ -6,7 +6,9 @@ const trackurl = "data/TheBeatlesCleaned.json";
 
 async function fetchTracks() {
     let raw = await fetch(trackurl);
-    return raw.json();
+    let json = raw.json();
+    console.log(json);
+    return json;
 }
 
 async function getTracks() {
@@ -21,4 +23,5 @@ async function getTracks() {
         localStorage.setItem("libraryTracks", JSON.stringify(data)); // cache in local storage
         return data;
     }
+
 }
