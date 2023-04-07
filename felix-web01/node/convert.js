@@ -1,10 +1,15 @@
 "use strict"
+var process = require("process")
+const argv = process.argv
 var fs = require("fs");
 
-let filepath = "data/TheBeatlesCleaned.csv";
+let filepath = argv[2]
+console.log(filepath)
+let outpath = argv[3]
+console.log(outpath)
 const raw = fs.readFileSync(filepath, {encoding:'utf8'});
 
-const rows = raw.split('\r\n');
+const rows = raw.split('\n');
 const headers = rows[0].split(';');
 const numCols = headers.length;
 
@@ -24,4 +29,4 @@ for (let i = 1; i < rows.length; i++) {
 }
 
 let stringOut = '[\n  '+out.join(',\n  ')+'\n]'; // result neatly indented
-fs.writeFileSync(filepath.replace(".csv", ".json"), stringOut);
+fs.writeFileSync(outpath, stringOut);

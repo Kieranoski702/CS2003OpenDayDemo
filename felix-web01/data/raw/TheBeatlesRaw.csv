@@ -1,3 +1,4 @@
+id;year;album;song;danceability;energy;speechiness;acousticness;liveness;valence;duration_ms
 1;1963;Please Please Me;I Saw Her Standing There;0.491;0.801;0.0361;0.27;0.0665;0.971;173947
 2;1963;Please Please Me;Misery;0.591;0.605;0.0413;0.707;0.309;0.882;108547
 3;1963;Please Please Me;Anna;0.608;0.565;0.0336;0.635;0.0601;0.835;177133
