@@ -1,4 +1,4 @@
-#player {
+#player-bar {
     height: 120px;
     width: 100%;
     background-color: var(--bg-light);
@@ -10,10 +10,10 @@
     align-items: center;
 }
 
-#player-name {
+#player-bar-name {
     font-weight: 600;
 }
-#player-details {
+#player-bar-details {
     font-size: 14px;
 }
 

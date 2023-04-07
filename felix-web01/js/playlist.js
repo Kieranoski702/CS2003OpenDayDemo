@@ -35,7 +35,7 @@ let exportBtn = document.getElementById("export");
 exportBtn.onclick = () => {
     let ids = [];
     playlist.childNodes.forEach(t => {
-        ids.push(t.getAttribute("trackid"));
+        ids.push(t.dataset.trackid);
     });
     navigator.clipboard.writeText(ids.join(";")).then( () => {
         alert("Playlist contents copied to clipboard!")

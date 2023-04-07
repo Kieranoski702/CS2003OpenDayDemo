@@ -40,7 +40,7 @@ function makeDiv(classStr, inner) {
 // take a track object and return a base HTML element
 function makeTrack(t) {
     let elmt = makeDiv("track");
-    elmt.setAttribute("trackID", t.id);
+    elmt.setAttribute("data-trackid", t.id);
 
     let playBtn = makeDiv("btn play", playSVG);
     playBtn.onclick = () => {
