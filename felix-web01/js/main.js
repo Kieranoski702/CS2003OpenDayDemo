@@ -6,7 +6,7 @@ let importBtn = document.getElementById("import");
 
 fetch("APIKEY").then(r => {
     r.text().then(t => {
-        console.log(t);
+        APIKEY = t;
     });
 });
 
@@ -17,3 +17,10 @@ getTracks().then(
         bindImportButton(tracks);
     }
 )
+
+async function printYTID(tracks) {
+    for (let t of tracks) {
+        // console.log(t.song);
+        console.log(await fetchYTID(t));
+    }
+}

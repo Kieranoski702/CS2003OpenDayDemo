@@ -8,10 +8,32 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 15px;
 }
 
+#current-control {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+#play-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    padding: 10px;
+    cursor: pointer;
+}
+#play-btn:hover {
+    background-color: var(--bg-dark);
+}
+.current-playing-text {
+    width: 40%;
+}
 #player-bar-name {
     font-weight: 600;
+    text-align: right;
 }
 #player-bar-details {
     font-size: 14px;
