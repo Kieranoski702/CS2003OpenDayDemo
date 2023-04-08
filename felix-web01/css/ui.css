@@ -1,15 +1,15 @@
 /* style the ui element that contains the two tracklists */
 
 #ui {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     padding: 30px 20px 140px 20px;
     max-width: 1800px;
     margin: 0 auto;
 }
 #ui .container {
-    flex-grow: 1;
+    width: 1fr;
     overflow: hidden;
 }
 #ui .container h2 {
