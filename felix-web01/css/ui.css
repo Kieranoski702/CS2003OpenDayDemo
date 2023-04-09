@@ -59,6 +59,7 @@
 }
 
 .invisible {
+  visibility:hidden;
   display: none;
   padding: 0;
   margin: 0;
@@ -67,5 +68,6 @@
 .invisible::before {
   content: "";
   display: none;
+  visibility:hidden;
 }
 

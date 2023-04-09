@@ -2,25 +2,50 @@
 
 console.log("Search loaded")
 
-function reset() { // unhide all tracks
-  library.querySelectorAll(".track *").forEach((track) => {
-    track.hidden = false; 
-    track.classList.remove("invisible")});
+function reset() { 
 
-  // get pseudo element too
-  library.querySelectorAll(".track").forEach((track) => {
-    track.classList.remove("invisible")});
+  // unhide all tracks
+  library.querySelectorAll(".track, .track *").forEach((elem) => {
+    elem.hidden = false; 
+    elem.classList.remove("invisible")});
 }
 
 
-function search(){
-  console.log("Not implemented")
-  library.querySelectorAll(".track *").forEach((track) => {
-    track.hidden = true; 
-    track.classList.add("invisible")});
+function search(string){
 
-    // https://stackoverflow.com/questions/71097308/how-to-show-hidden-pseudo-element-with-javascript
+  let queryString = string.toLowerCase()
+
+  // Some helper functios
+  function hide(elem){
+    elem.hidden = true; 
+    elem.classList.add("invisible");
+
+    elem.querySelectorAll(".track *").forEach((e) => {
+      e.hidden = true; 
+      e.classList.add("invisible")});
+  }
+
+  function show(elem){
+    elem.hidden = false; 
+    elem.classList.remove("invisible");
+
+    elem.querySelectorAll(".track *").forEach((e) => {
+      e.hidden = false; 
+      e.classList.remove("invisible")});
+  }
+
+
+  // search all the tracks for substrings
   library.querySelectorAll(".track").forEach((track) => {
-    console.log(track);
-    track.classList.add("invisible")});
+    let name = track.querySelector(".name").textContent.toLowerCase();
+    let details = track.querySelector(".details").textContent.toLowerCase();
+
+    if (name.search(queryString) > -1 || details.search(queryString) > -1) {
+      show(track)
+    }
+    else {
+      hide(track)
+    }
+  });
+
 }
