@@ -10,7 +10,6 @@
 }
 #ui .container {
     width: 1fr;
-    overflow: hidden;
 }
 #ui .container h2 {
     text-align: center;
@@ -19,9 +18,11 @@
 
 .tracklist {
     width: 100%;
+    height: 65vh;
     max-width: 900px;
     margin: 0 auto;
     counter-reset: tracknums;
+    overflow: scroll;
 }
 .tracklist-top {
     width: 100%;
