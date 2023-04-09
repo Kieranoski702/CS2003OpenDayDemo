@@ -37,8 +37,8 @@ async function getTracks() {
 
 async function fetchYTID(t) {
     // Fetch the first track ID from a keyword search
-    let title = encodeURIComponent("The Beatles " + t.song);
-    let search = APIURL+`?part=snippet&type=video&videoSyndicated=true&maxResults=1&q=${title}&type=video&key=${APIKEY}`;
+    let title = encodeURIComponent("The Beatles " + t.song + " lyrics");
+    let search = APIURL+`?part=snippet&type=video&videoEmbeddable=true&maxResults=1&q=${title}&type=video&key=${APIKEY}`;
     console.log(search);
     // let res = await fetch(search);
     // let videos = await res.json();

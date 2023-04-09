@@ -1,9 +1,9 @@
-var audioPlayer;
+var player;
 
 function onYouTubeIframeAPIReady() {
-    audioPlayer = new YT.Player("audio-player", {
-        height:"0",
-        width:"0",
+    player = new YT.Player("player", {
+        height:"300",
+        width:"300",
         videoId: "",
         playerVars: {
             autoplay: false,
