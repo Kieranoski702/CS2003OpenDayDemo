@@ -18,6 +18,64 @@
     --btn-light: #eee;
 }
 
+/*========== Variables Light theme ==========*/
+body.dark-theme {
+    --bg-dark: #eee;
+    --bg-light: #fff;
+    --shadow: #ddd;
+    --text: #334;
+    --insert-hint: #99f;
+    --btn-dark: #778;
+    --btn-light: #334;
+}
+
+
+/*==================== NAV ====================*/
+.nav {
+    max-width: 968px;
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav__logo {
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+  }
+  
+  .nav__logo:hover {
+    color: var(--first-color);
+  }
+
+/*========== Button Dark/Light ==========*/
+.change-theme,
+.uil-search {
+  font-size: 1.25rem;
+  color: var(--title-color);
+  margin-right: var(--mb-1);
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  float: left;
+}
+
+.uil-moon {
+  content: url("../img/moon\ lightmode.svg");
+}
+
+.uil-moon:hover {
+  content: url("../img/moon\ hover.svg");
+}
+
+.uil-sun {
+  content: url("../img/sun\ darkmode.svg");
+}
+
+.uil-sun:hover {
+  content: url("../img/sun\ hover.svg");
+}
+
 html {
     height: 100%;
     background-color: var(--bg-dark);
@@ -27,6 +85,7 @@ html {
 
 .header {
     height: 80px;
+    color: var(--text);
     background-color: var(--bg-light);
     display: flex;
     justify-content: center;
