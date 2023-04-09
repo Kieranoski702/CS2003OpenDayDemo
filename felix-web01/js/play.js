@@ -14,6 +14,7 @@ function play(t) {
     playingDetails.innerText = t.album + " • " + t.year;
     playingDur.innerText = formatMS(t.duration_ms);
     playingPos.innerText = "0:00";
+    progress.style.width = "0%";
 }
 
 function updatePlayerButton() {
