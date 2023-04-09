@@ -58,4 +58,14 @@
     transform: rotate(-90deg);
 }
 
+.invisible {
+  display: none;
+  padding: 0;
+  margin: 0;
+}
+
+.invisible::before {
+  content: "";
+  display: none;
+}
 
