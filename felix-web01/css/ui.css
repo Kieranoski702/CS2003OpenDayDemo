@@ -22,7 +22,7 @@
     max-width: 900px;
     margin: 0 auto;
     counter-reset: tracknums;
-    overflow: scroll;
+    overflow: auto;
 }
 .tracklist-top {
     width: 100%;
@@ -57,3 +57,5 @@
 #export img {
     transform: rotate(-90deg);
 }
+
+
