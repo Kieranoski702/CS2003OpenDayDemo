@@ -16,11 +16,13 @@
 
     --bg-dark: #334;
     --bg-light: #3a3a4a;
+    --bg-light-translucent: #3a3a4a40;
     --shadow: #2c2c3b;
     --text: #eee;
     --insert-hint: #99f;
     --btn-dark: #778;
     --btn-light: #eee;
+    --removing-track: #f002;
 }
 
 html {

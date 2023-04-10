@@ -85,3 +85,7 @@ function importPlaylist(tracks, str) {
         addTrack(t);
     });
 }
+
+function playlistSize() {
+    return playlist.childNodes.length;
+}

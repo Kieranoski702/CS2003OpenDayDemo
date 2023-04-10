@@ -44,3 +44,6 @@
 #playlist .track:hover::after {
     opacity: 1;
 }
+#playlist .track.removing {
+    background-color: var(--removing-track);
+}

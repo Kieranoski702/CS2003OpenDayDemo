@@ -1,6 +1,6 @@
 "use strict"
 
-var current = null;
+var currentDragged = null;
 
 function shouldInsertAbove(d, e) {
     let rec = d.getBoundingClientRect();
@@ -12,45 +12,49 @@ function shouldInsertAbove(d, e) {
 
 // every time an element is added to the playlist, call this on it
 // adapted from W.S. Toh's post at https://code-boxx.com/drag-drop-sortable-list-javascript/
-function makeSortable(t) {
-    t.draggable = true;
+function makeSortable(el) {
+    el.draggable = true;
 
-    t.ondragstart = (e) => {
-        current = t;
+    el.ondragstart = (e) => {
+        currentDragged = el;
+        movingLibraryTrack = false;
+        updateOverlays();
     };
 
-    t.ondragenter = (e) => {
-        t.classList.add("insert");
+    el.ondragenter = (e) => {
+        el.classList.add("insert");
     };
 
-    t.ondragleave = (e) => {
-        t.classList.remove("insert");
-        t.classList.remove("above");
-        t.classList.remove("below");
+    el.ondragleave = (e) => {
+        el.classList.remove("insert");
+        el.classList.remove("above");
+        el.classList.remove("below");
     };
 
-    t.ondragover = (e) => {
+    el.ondragover = (e) => {
         e.preventDefault()
-        t.classList.add("insert");
-        if (shouldInsertAbove(t, e)) {
-            t.classList.add("above");
-            t.classList.remove("below");
+        el.classList.add("insert");
+        if (shouldInsertAbove(el, e)) {
+            el.classList.add("above");
+            el.classList.remove("below");
         } else {
-            t.classList.add("below");
-            t.classList.remove("above");
+            el.classList.add("below");
+            el.classList.remove("above");
         }
     };
 
-    t.ondrop = (e) => {
+    el.ondrop = (e) => {
         e.preventDefault();
-        t.classList.remove("insert");
-        t.classList.remove("above");
-        t.classList.remove("below");
+        el.classList.remove("insert");
+        el.classList.remove("above");
+        el.classList.remove("below");
 
-        if (shouldInsertAbove(t, e)) {
-            t.insertAdjacentElement('beforebegin', current);
+        if (shouldInsertAbove(el, e)) {
+            el.insertAdjacentElement('beforebegin', currentDragged);
         } else {
-            t.insertAdjacentElement('afterend', current);
+            el.insertAdjacentElement('afterend', currentDragged);
         }
+        currentDragged = null;
+        updateOverlays();
     };
 }

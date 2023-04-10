@@ -1,10 +1,7 @@
 "use strict"
 
-const library = document.getElementById('library');
 const playlist = document.getElementById('playlist');
-
-let plInfo = document.getElementById("pl-info");
-let lbInfo = document.getElementById("lb-info");
+const plInfo = document.getElementById("pl-info");
 
 
 // image uploaded by SVG Repo to https://www.svgrepo.com/svg/56237/add
@@ -44,6 +41,7 @@ function makeDiv(classStr, inner) {
 // take a track object and return a base HTML element
 function makeTrack(t) {
     let elmt = makeDiv("track");
+    elmt.track = t;
     elmt.setAttribute("data-trackid", t.id);
 
     let playBtn = makeDiv("btn play", playSVG);
@@ -75,7 +73,7 @@ function makePlaylistTrack(t) {
         removeTrack(t);
     }
     elmt.appendChild(rmBtn);
-    makeSortable(elmt);
+    makeSortable(elmt, t);
 
     return elmt;
 }
@@ -89,23 +87,7 @@ function makeLibraryTrack(t) {
         addTrack(t);
     }
     elmt.appendChild(addBtn);
+    makeFetchable(elmt);
 
     return elmt;
-}
-
-// this message will stay if there's an error populating the library
-lbInfo.innerHTML = "Something went wrong and tracks could not be loaded."
-
-// take an array of track objects and populate the library with elements
-function populateLibrary(ts) {
-    let nTracks = 0;
-    let totalDur = 0;
-    ts.forEach(t => {
-        library.appendChild(
-            makeLibraryTrack(t)
-        );
-        nTracks ++;
-        totalDur += parseInt(t.duration_ms);
-    });
-    lbInfo.innerHTML = nTracks + " songs - " + formatMS(totalDur);
 }
