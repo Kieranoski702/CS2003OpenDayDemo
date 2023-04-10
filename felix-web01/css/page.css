@@ -8,6 +8,7 @@
     scrollbar-color: var(--btn-light) var(--btn-dark);
     margin: 0; padding: 0;
     box-sizing: border-box;
+    overflow: none;
 }
 
 :root { /* global variables */
@@ -88,7 +89,6 @@ body.dark-theme {
 }
 
 body {
-    height: 100%;
     background-color: var(--bg-dark);
     font-family: 'Montserrat',sans-serif;
     color: var(--text);
