@@ -88,7 +88,7 @@ function makeLibraryTrack(t) {
     addBtn.onclick = () => {
         let nt = makePlaylistTrack(t);
         playlist.appendChild(nt);
-        playlist.scrollTo(0,playlist.clientHeight);
+        playlist.scrollTo(0,playlist.scrollHeight);
         addTrack(t);
     }
     elmt.appendChild(addBtn);
