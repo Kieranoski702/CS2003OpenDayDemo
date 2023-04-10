@@ -44,6 +44,11 @@ function makeTrack(t) {
     elmt.track = t;
     elmt.setAttribute("data-trackid", t.id);
 
+    let img = document.createElement("img");
+    img.setAttribute("src", albumImg(t.album));
+    img.classList.add("album-img");
+    elmt.appendChild(img);
+
     let playBtn = makeDiv("btn play", playSVG);
     playBtn.onclick = () => {
         play(t);
@@ -90,4 +95,8 @@ function makeLibraryTrack(t) {
     makeFetchable(elmt);
 
     return elmt;
+}
+
+function albumImg(name) {
+    return "img/albums/" + name.replace(/\s/g, "").toLowerCase() + ".jpg";
 }

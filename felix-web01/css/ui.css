@@ -22,7 +22,6 @@
     height: 65vh;
     max-width: 900px;
     margin: 0 auto;
-    counter-reset: tracknums;
     overflow: auto;
 }
 .tracklist-top {
