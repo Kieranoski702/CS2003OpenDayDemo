@@ -56,6 +56,9 @@
     transform: rotate(45deg);
 }
 
+.track.invisible {
+  height:0;
+}
 .track .info {
     min-width: 250px;
     overflow: hidden;

@@ -64,8 +64,33 @@
     height: 100%;
     z-index: 100;
     pointer-events: all;
-}
+
 
 #playlist-overlay {
     pointer-events: none;
+}
+
+.invisible {
+  display: none;
+  padding: 0;
+  margin: 0;
+  max-height:0;
+  height:0;
+}
+.invisible:hover {
+  display: none;
+  padding: 0;
+  margin: 0;
+  max-height:0;
+  height:0;
+}
+
+
+.invisible::before {
+  display: none;
+  content: "";
+  padding: 0;
+  margin: 0;
+  max-height:0;
+  height:0;
 }
