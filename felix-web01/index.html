@@ -14,19 +14,36 @@
     <link rel="stylesheet" href="css/ui.css">
 </head>
 <body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+            <div class="header">
+                <h1>Beatlemania</h1>
+            </div>
+          <div class="nav__btns">
+            <!-- Theme change button -->
+            <img
+              src="data:,"
+              alt="Moon"
+              class="change-theme uil-moon"
+              id="theme-button"
+            />
+          </div>
+      </header>
+    <div id="youtube-player" style="display: none"></div>
     <div id="player" style="display: none"></div>
-    <div class="header">
-        <h1>Beatlemania</h1>
-    </div>
     <div id="ui">
         <div class="container">
             <div class="container-overlay" id="playlist-overlay"></div>
             <div class="pl-header">
                 <!-- SVG by Ant Design, https://www.svgrepo.com/svg/332418/import -->
-                <div id="import" class="btn"><img src="img/import.svg" alt=""></div>
+                <div id="import" class="btn"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon">
+                    <path fill="currentColor" d="M888.3 757.4h-53.8c-4.2 0-7.7 3.5-7.7 7.7v61.8H197.1V197.1h629.8v61.8c0 4.2 3.5 7.7 7.7 7.7h53.8c4.2 0 7.7-3.4 7.7-7.7V158.7c0-17-13.7-30.7-30.7-30.7H158.7c-17 0-30.7 13.7-30.7 30.7v706.6c0 17 13.7 30.7 30.7 30.7h706.6c17 0 30.7-13.7 30.7-30.7V765.1c0-4.3-3.5-7.7-7.7-7.7zm18.6-251.7L765 393.7c-5.3-4.2-13-.4-13 6.3v76H438c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h314v76c0 6.7 7.8 10.5 13 6.3l141.9-112a8 8 0 0 0 0-12.6z"/>
+                  </svg></div>
                 <h2>Playlist</h2>
                 <!-- SVG by Ant Design, https://www.svgrepo.com/svg/332349/export -->
-                <div id="export" class="btn"><img src="img/export.svg" alt=""></div>
+                <div id="export" class="btn"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon">
+                    <path fill="currentColor" d="M888.3 757.4h-53.8c-4.2 0-7.7 3.5-7.7 7.7v61.8H197.1V197.1h629.8v61.8c0 4.2 3.5 7.7 7.7 7.7h53.8c4.2 0 7.7-3.4 7.7-7.7V158.7c0-17-13.7-30.7-30.7-30.7H158.7c-17 0-30.7 13.7-30.7 30.7v706.6c0 17 13.7 30.7 30.7 30.7h706.6c17 0 30.7-13.7 30.7-30.7V765.1c0-4.3-3.5-7.7-7.7-7.7zM902 476H588v-76c0-6.7-7.8-10.5-13-6.3l-141.9 112a8 8 0 0 0 0 12.6l141.9 112c5.3 4.2 13 .4 13-6.3v-76h314c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8z"/>
+                  </svg></div>
             </div>
             <!-- dummy for spacing -->
             <p id="pl-info" class="tracklist-top"></p>
@@ -45,7 +62,8 @@
         <div id="current-control">
             <p id="player-bar-name" class="current-playing-text">-</p>
             <div id="play-btn">
-                <img src="img/pause.svg" id="play-btn-img" alt="pause/resume button">
+                <svg id="pause-btn-img" viewBox="0 0 32 32" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M5.92 24.096q0 0.832 0.576 1.408t1.44 0.608h4.032q0.832 0 1.44-0.608t0.576-1.408v-16.16q0-0.832-0.576-1.44t-1.44-0.576h-4.032q-0.832 0-1.44 0.576t-0.576 1.44v16.16zM18.016 24.096q0 0.832 0.608 1.408t1.408 0.608h4.032q0.832 0 1.44-0.608t0.576-1.408v-16.16q0-0.832-0.576-1.44t-1.44-0.576h-4.032q-0.832 0-1.408 0.576t-0.608 1.44v16.16z"></path></svg>
+                <svg id="play-btn-img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-60 -30 400 400" xml:space="preserve"><path fill="currentColor" id="XMLID_308_" d="M37.728,328.12c2.266,1.256,4.77,1.88,7.272,1.88c2.763,0,5.522-0.763,7.95-2.28l240-149.999  c4.386-2.741,7.05-7.548,7.05-12.72c0-5.172-2.664-9.979-7.05-12.72L52.95,2.28c-4.625-2.891-10.453-3.043-15.222-0.4  C32.959,4.524,30,9.547,30,15v300C30,320.453,32.959,325.476,37.728,328.12z"/></svg>
             </div>
             <p id="player-bar-details" class="current-playing-text">-</p>
         </div>

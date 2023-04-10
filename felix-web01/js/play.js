@@ -17,12 +17,25 @@ function play(t) {
     progress.style.width = "0%";
 }
 
+// function updatePlayerButton() {
+//     if (player.getPlayerState() === YT.PlayerState.PLAYING
+//     || player.getPlayerState() === YT.PlayerState.BUFFERING) {
+//         playBtnImg.setAttribute("src", "img/play.svg");
+//     } else {
+//         playBtnImg.setAttribute("src", "img/pause.svg");
+//     }
+// }
+
 function updatePlayerButton() {
+    var playBtn = document.getElementById("play-btn-img");
+    var pauseBtn = document.getElementById("pause-btn-img");
     if (player.getPlayerState() === YT.PlayerState.PLAYING
-    || player.getPlayerState() === YT.PlayerState.BUFFERING) {
-        playBtnImg.setAttribute("src", "img/play.svg");
+        || player.getPlayerState() === YT.PlayerState.BUFFERING) {
+        playBtn.style.display = "block";
+        pauseBtn.style.display = "none";
     } else {
-        playBtnImg.setAttribute("src", "img/pause.svg");
+        playBtn.style.display = "none";
+        pauseBtn.style.display = "block";
     }
 }
 

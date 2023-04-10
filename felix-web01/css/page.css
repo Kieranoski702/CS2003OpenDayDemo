@@ -26,7 +26,69 @@
     --removing-track: #f002;
 }
 
-html {
+/*========== Variables Light theme ==========*/
+body.dark-theme {
+    --bg-dark: #eee;
+    --bg-light: #fff;
+    --bg-light-translucent: #fff40;
+    --shadow: #ddd;
+    --text: #334;
+    --insert-hint: #99f;
+    --btn-dark: #778;
+    --btn-light: #334;
+    --removing-track: #f002;
+}
+
+
+/*==================== NAV ====================*/
+.nav {
+    max-width: 968px;
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav__logo {
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+  }
+  
+  .nav__logo:hover {
+    color: var(--first-color);
+  }
+
+  .nav__btns {
+    display: flex;
+    margin-right: 5%;
+    width: 50px;
+    height: 50px;
+    padding: 9px;
+    transition: background-color var(track-hl-speed) ease;
+    cursor: pointer;
+  }
+
+  .nav__btns:hover {
+    background-color: var(--bg-dark);
+  }
+
+/*========== Button Dark/Light ==========*/
+.change-theme {
+  font-size: 1.25rem;
+  color: var(--title-color);
+  margin-right: var(--mb-1);
+  cursor: pointer;
+  justify-content: flex-end;
+}
+
+.uil-moon {
+  content: url("../img/sun\ darkmode.svg");
+}
+
+.uil-sun {
+  content: url("../img/moon\ lightmode.svg");
+}
+
+body {
     background-color: var(--bg-dark);
     font-family: 'Montserrat',sans-serif;
     color: var(--text);
@@ -34,8 +96,10 @@ html {
 
 .header {
     height: 80px;
+    color: var(--text);
     background-color: var(--bg-light);
     display: flex;
+    flex-grow: 1;
     justify-content: center;
     align-items: center;
     box-shadow: var(--shadow) 0px 4px;
