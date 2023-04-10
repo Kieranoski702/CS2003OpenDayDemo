@@ -79,7 +79,6 @@ function makePlaylistTrack(t) {
     }
     elmt.appendChild(rmBtn);
     makeSortable(elmt, t);
-
     return elmt;
 }
 
@@ -89,6 +88,7 @@ function makeLibraryTrack(t) {
     addBtn.onclick = () => {
         let nt = makePlaylistTrack(t);
         playlist.appendChild(nt);
+        playlist.scrollTo(0,playlist.clientHeight);
         addTrack(t);
     }
     elmt.appendChild(addBtn);

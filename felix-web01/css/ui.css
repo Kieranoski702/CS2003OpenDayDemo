@@ -22,8 +22,9 @@
 
 .tracklist {
     width: 100%;
-    height: auto;
+    min-height:0;
     max-height: 55vh;
+    height: auto;
     max-width: 900px;
     margin: 0 0;
     overflow: auto;
