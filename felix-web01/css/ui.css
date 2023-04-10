@@ -50,11 +50,11 @@
 .pl-header .btn:hover {
     background-color: var(--bg-light);
 }
-.pl-header .btn img {
+.pl-header .btn svg {
     width: 32px;
 }
-#import img ,
-#export img {
+#import svg ,
+#export svg {
     transform: rotate(-90deg);
 }
 

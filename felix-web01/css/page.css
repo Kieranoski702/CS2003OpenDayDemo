@@ -59,34 +59,32 @@ body.dark-theme {
   .nav__btns {
     display: flex;
     margin-right: 5%;
+    width: 50px;
+    height: 50px;
+    padding: 9px;
+    transition: background-color var(track-hl-speed) ease;
+    cursor: pointer;
+  }
+
+  .nav__btns:hover {
+    background-color: var(--bg-dark);
   }
 
 /*========== Button Dark/Light ==========*/
-.change-theme,
-.uil-search {
+.change-theme {
   font-size: 1.25rem;
   color: var(--title-color);
   margin-right: var(--mb-1);
   cursor: pointer;
-  width: 25px;
-  height: 25px;
   justify-content: flex-end;
 }
 
 .uil-moon {
-  content: url("../img/moon\ lightmode.svg");
-}
-
-.uil-moon:hover {
-  content: url("../img/moon\ hover.svg");
-}
-
-.uil-sun {
   content: url("../img/sun\ darkmode.svg");
 }
 
-.uil-sun:hover {
-  content: url("../img/sun\ hover.svg");
+.uil-sun {
+  content: url("../img/moon\ lightmode.svg");
 }
 
 body {
