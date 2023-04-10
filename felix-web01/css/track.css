@@ -15,21 +15,19 @@
     background-color: var(--bg-light);
 }
 
-.track::before {
-    counter-increment: tracknums;
-    content: counter(tracknums);
+.track .album-img {
     width: var(--track-height);
     height: var(--track-height);
+    padding: 10px;
     position: absolute;
     left: 0;
-    text-align: center;
-    line-height: var(--track-height);
+    /* border-radius: 4px; */
 }
 
 .track .btn.play {
     position: absolute;
     left: 0;
-    background-color: var(--bg-light);
+    background-color: var(--bg-light-translucent);
 }
 
 .track .btn {

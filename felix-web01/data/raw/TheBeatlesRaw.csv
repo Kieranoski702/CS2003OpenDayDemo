@@ -1,18 +1,18 @@
 id;year;album;song;danceability;energy;speechiness;acousticness;liveness;valence;duration_ms;ytid
 1;1963;Please Please Me;I Saw Her Standing There;0.491;0.801;0.0361;0.27;0.0665;0.971;173947;UxL87Tfy7XY
-2;1963;Please Please Me;Misery;0.591;0.605;0.0413;0.707;0.309;0.882;108547;qhbcN3ew9z0
+2;1963;Please Please Me;Misery;0.591;0.605;0.0413;0.707;0.309;0.882;108547;L2DVMu4v1Lw
 3;1963;Please Please Me;Anna;0.608;0.565;0.0336;0.635;0.0601;0.835;177133;_KCqgUNJlfM
 4;1963;Please Please Me;Chains;0.654;0.561;0.0304;0.608;0.129;0.929;145080;zjqi1HqRS5I
-5;1963;Please Please Me;Boys;0.402;0.86;0.0504;0.607;0.736;0.822;146440;Vu9j4syEJDE
-6;1963;Please Please Me;Ask Me Why;0.605;0.394;0.0378;0.767;0.0967;0.597;146533;2ttGjtfQ7EA
+5;1963;Please Please Me;Boys;0.402;0.86;0.0504;0.607;0.736;0.822;146440;2AUQUFHCUQ0
+6;1963;Please Please Me;Ask Me Why;0.605;0.394;0.0378;0.767;0.0967;0.597;146533;YiYMYmAYw2M
 7;1963;Please Please Me;Please Please Me;0.527;0.48;0.028;0.334;0.0702;0.706;120853;behq8T88QRU
 8;1963;Please Please Me;Love Me Do;0.52;0.829;0.0806;0.386;0.227;0.744;141693;xrN2nWe4kPI
-9;1963;Please Please Me;P.S. I Love You;0.635;0.656;0.0291;0.389;0.0828;0.77;124360;MA5DkiVKSlM
+9;1963;Please Please Me;P.S. I Love You;0.635;0.656;0.0291;0.389;0.0828;0.77;124360;N7ffVuLp-MM
 10;1963;Please Please Me;Baby It's You;0.608;0.494;0.0345;0.778;0.0926;0.879;160520;wlHL2gKqI1s
 11;1963;Please Please Me;Do You Want to Know a Secret;0.673;0.349;0.0368;0.608;0.38;0.609;117013;s4_Btpw8RqY
 12;1963;Please Please Me;Taste of Honey;0.42;0.372;0.0327;0.698;0.104;0.412;123480;TA34IvVEbDQ
 13;1963;Please Please Me;There's a Place;0.455;0.582;0.0292;0.629;0.172;0.927;110493;zi6JI3K-ANc
-14;1963;Please Please Me;Twist and Shout;0.482;0.849;0.0452;0.641;0.0414;0.937;155227;5Jvu-8dSD0g
+14;1963;Please Please Me;Twist and Shout;0.482;0.849;0.0452;0.641;0.0414;0.937;155227;VxOpl0RS4dI
 15;1963;With The Beatles;It Wont Be Long;0.472;0.673;0.0318;0.284;0.206;0.862;133387;UVKU6SevefY
 16;1963;With The Beatles;All I've Got To Do;0.49;0.579;0.0344;0.217;0.0644;0.879;122573;_jjf4O1krME
 17;1963;With The Beatles;All My Loving;0.416;0.563;0.0298;0.207;0.343;0.9;127853;xr7tyMLKtlA

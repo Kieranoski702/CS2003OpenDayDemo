@@ -29,11 +29,13 @@
         </nav>
       </header>
     <div id="youtube-player" style="display: none"></div>
+    <div id="player" style="display: none"></div>
     <div class="header">
         <h1>Beatlemania</h1>
     </div>
     <div id="ui">
         <div class="container">
+            <div class="container-overlay" id="playlist-overlay"></div>
             <div class="pl-header">
                 <!-- SVG by Ant Design, https://www.svgrepo.com/svg/332418/import -->
                 <div id="import" class="btn"><img src="img/import.svg" alt=""></div>
@@ -45,6 +47,7 @@
             <div class="tracklist" id="playlist"></div>
         </div>
         <div class="container">
+            <div class="container-overlay" id="library-overlay"></div>
             <h2>Library</h2>
             <p id="lb-info" class="tracklist-top"></p>
             <div class="tracklist" id="library"></div>
@@ -72,9 +75,10 @@
     <script src="js/populate.js"></script>
     <script src="js/playlist.js"></script>
     <script src="js/sortable.js"></script>
+    <script src="js/library.js"></script>
     <script src="js/main.js"></script>
 
     <script src="https://www.youtube.com/iframe_api"></script>
-    <script src="js/ytplayer.js"></script>
+    <script src="js/player.js"></script>
 </body>
 </html>
