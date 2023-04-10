@@ -82,6 +82,7 @@ function importPlaylist(tracks, str) {
         let t = tracks[id-1];
         let elmt = makePlaylistTrack(t);
         playlist.appendChild(elmt);
+        playlist.scrollTo(0,playlist.scrollHeight);
         addTrack(t);
     });
 }
